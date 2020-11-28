@@ -1,0 +1,21 @@
+
+<app-ajouterexperiance></app-ajouterexperiance>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Entreprise</th>
+      <th scope="col">Poste</th>
+      <th scope="col">Debut</th>
+      <th scope="col">Fin</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let element of exp">
+      
+      <td>{{element.nomentreprise}}</td>
+      <td> {{element.posteoccupe}}</td>
+      <td>{{element.datedeb}} </td>
+      <td>{{element.dateFin}} </td>
+    </tr>
+  </tbody>
+</table>

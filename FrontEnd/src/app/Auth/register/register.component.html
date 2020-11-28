@@ -1,0 +1,86 @@
+<section class="w3l-inner-banner">
+        <div class="wrapper">
+        </div>
+    </section>
+
+<section class="w3l-price-2 register-block">
+        <div class="price-main register-block-main">
+            <div class="wrapper">
+                <div class="pricing-style-w3ls">
+                    <div class="full text-center">
+                        <label class="toggler toggler--is-active" id="filt-monthly" (click)="newClick()">Créer Un Nouveau Compte</label>
+                        <div class="toggle" id="switcher"></div>
+                        <label class="toggler" id="filt-hourly" (click)="oldClick()">Vous Avez Déjà Un Compte ?</label>
+                    </div>
+                    <div id="monthly" class="" *ngIf="new==1">
+                        <div class="w3l-forms-31-right">
+                            <h3>Si vous êtes nouveau, inscrivez-vous ici</h3>
+                            <form *ngIf="!isSuccessful" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidateclass="register-form">
+                                <div class="form-input">
+                                    <label>Nom</label>
+                                    <input type="text" name="name" [(ngModel)]="form.name" required minlength="3" maxlength="20" #name="ngModel" placeholder="Foulen" required="" />
+                                </div>
+                                <div class="form-input">
+                                    <label>Prénom</label>
+                                    <input type="text" name="prenom" [(ngModel)]="form.prenom" required minlength="3" maxlength="20" #prenom="ngModel" placeholder="Fouleni" required=""  />
+                                   
+                                </div>
+                                <div class="form-input">
+                                    <label>Email</label>
+                                    <input type="email" name="email" [(ngModel)]="form.email" required minlength="3" maxlength="255" #username="ngModel" placeholder="email@mail.com" required="" />
+                                </div>
+                                <div class="form-input">
+                                    <label>Mot De Passe</label>
+                                    <input type="password" name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel" required="" />
+                                </div>
+                                <div>
+                                    <label class="check-remember container">
+                                        <input type="checkbox" class="form-check" name="check" [(ngModel)]="form.check" required />
+                                        <span class="checkmark"></span>
+                                        <p class="privacy-policy">J'accepte les termes et conditions de M!Relation.com</p>
+                                    </label>
+                                    <div class="clear"></div>
+                                </div>
+                                <button class="btn" [disabled]="!f.valid">S'inscrire</button>
+                                
+                                <div class="clear"></div>
+                                <div class="alert alert-warning" *ngIf="f.submitted && isSignUpFailed">
+                                  Signup failed!<br />{{ errorMessage }}
+                                </div>
+
+                                
+                            </form>
+                            <div class="alert alert-success" *ngIf="isSuccessful">
+                              Inscription réussie! un email de confirmation a été envoyer a votre email, veuillez le valider pour accéder a votre compte.
+                            </div>
+                        </div>
+                    </div>
+                    <div id="hourly" class="" *ngIf="new==2">
+                        <div class="w3l-forms-31-right">
+                            <h3> Si vous avez un compte, connectez-vous</h3>
+                            <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onLogin()" #f="ngForm" novalidate class="register-form">
+                                <div class="form-input">
+                                    <label>Email</label>
+                                    <input type="email" name="email" [(ngModel)]="form.email" required #email="ngModel" placeholder="mail@mail.com" required="" />
+                                </div>
+                                <div class="form-input">
+                                    <label>Mot de passe</label>
+                                    <input type="password" name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel" placeholder="Minimum 6 characters"
+                                        required="" />
+                                </div>
+                                <div class="form-group">
+                                  <div class="alert alert-danger" role="alert" *ngIf="f.submitted && isLoginFailed">
+                                    Login failed: {{ errorMessage }}
+                                  </div>
+                                </div>
+                              
+                                <button class="btn">Se Connecter </button>
+                                <div class="clear"></div>
+                            </form>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>

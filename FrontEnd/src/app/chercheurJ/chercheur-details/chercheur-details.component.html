@@ -1,0 +1,154 @@
+
+
+
+    <section class="w3l-inner-banner" *ngIf="VE != null">
+        <div class="wrapper">
+            <div class="d-grid employer-grid">
+                <div class="employer-title" *ngIf="retrievedImage !=null">
+                    <img [src]="retrievedImage" width="200" class="img-responsive" alt="" />
+                </div>
+                <div class="employer-title" *ngIf="retrievedImage ==null">
+                    <img src="/assets/images/profile.png" width="200" class="img-responsive"  alt="" />
+                </div>
+                <div class="employer-name">
+                    <h4>{{VE.name}} {{VE.prenom}}</h4>
+                    <pre><b>{{VE.ratingnote}}</b><img src="/assets/images/rating-star.png"
+                      width="16" >    <img  src="/assets/images/rat.png" width="50" alt="Action" type="button"  data-toggle="modal" data-target="#exampleModal">
+                    </pre>
+                </div>
+                <!--          <div class="employer-apply">
+                    <a href="#facebook" class="facebook"> <span class="fa fa-facebook-square"></span> </a>
+                    <a href="#facebook" class="twitter"> <span class="fa fa-twitter-square"></span> </a>
+                    <a href="#linkedin" class="linkedin"> <span class="fa fa-linkedin-square"></span> </a>
+                </div> -->
+            </div>
+        </div>
+    </section>
+    <!-- Blog -->
+    <section class="w3l-blog-single no-padding">
+        <div class="single blog">
+            <div class="wrapper">
+                <div class="container">
+
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog"
+                    aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Noter</h5>
+                                <button type="button" class="close" data-dismiss="modal"
+                                    aria-label="Close">
+                                    <span aria-hidden="true">&times;</span>
+                                </button>
+                            </div>
+                            <div class="modal-body">
+                                <ngb-rating [(rate)]="currentRate" max="5" name="addedrate"
+                                    [(ngModel)]="addedrate" (click)=calcrating()>
+                                    <ng-template let-fill="fill" let-index="index">
+                                        <span class="star" [class.filled]="fill === 100"
+                                            [class.bad]="index < 3">&#9733;</span>
+                                    </ng-template>
+                                </ngb-rating>
+                                <hr>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                    <div id="stepper1" class="bs-stepper">
+                        <div class="bs-stepper-header">
+                            <div class="step" data-target="#test-l-1">
+                                <button class="step-trigger">
+                                    <span class="bs-stepper-circle">1</span>
+                                    <span class="bs-stepper-label">Information Personnelle</span>
+                                </button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step" data-target="#test-l-2">
+                                <button class="step-trigger">
+                                    <span class="bs-stepper-circle">2</span>
+                                    <span class="bs-stepper-label">Disponibilité</span>
+                                </button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step" data-target="#test-l-3">
+                                <button class="step-trigger">
+                                    <span class="bs-stepper-circle">3</span>
+                                    <span class="bs-stepper-label">Experiances </span>
+                                </button>
+                            </div>
+                            <div class="line"></div>
+                            <div class="step" data-target="#test-l-4">
+                                <button class="step-trigger">
+                                    <span class="bs-stepper-circle">4</span>
+                                    <span class="bs-stepper-label">Preferance </span>
+                                </button>
+                            </div>
+                        </div>
+                        <div class="bs-stepper-content">
+                            <form (ngSubmit)="SaveMission()">
+                                <div id="test-l-1" class="content">
+
+
+
+                         
+                         
+<div id="" class="container___11mOE isActive___1fxSt" *ngIf="VE != null">
+    <div>
+      <h3 style="display: flex;">
+        <div style="padding: 2px 2px 2px 0px;">Informations Personnelle</div>
+      </h3>
+
+      <div class="topRightButton___CTD8W" role="presentation" data-tip="true" data-for=""><img 
+          src="/assets/images/pencil.png" width="30" alt="Action"  data-toggle="modal" data-target=".bd-example-modal-lg"></div>
+      <div>
+        <div class="legalUser___3Fdx7" >
+          <div class="profileStudentDisplay___16RWd">
+            <div>Prénom et Nom :</div>
+            <div>{{VE.name}} {{VE.prenom}}</div>
+          </div>
+          <div class="profileStudentDisplay___16RWd">
+            <div>Date de Naissance :</div>
+            <div>{{VE.dateNaissance | date}}</div>
+          </div>
+          <div class="profileStudentDisplay___16RWd">
+            <div>Ville</div>
+            <div> {{VE.ville}} </div>
+          </div>
+          <div class="profileStudentDisplay___16RWd">
+            <div>Nationalité :</div>
+            <div>{{VE.nationalite}}</div>
+          </div>
+          <div class="profileStudentDisplay___16RWd">
+            <div>Telephone :</div>
+            <div> {{VE.telephone}} </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+                            </div>
+                      
+                        <div id="test-l-2" class="content">
+                            <h2>Disponibilité</h2>
+                        <app-ajouterdisponibilte></app-ajouterdisponibilte>
+
+                        </div>
+                        <div id="test-l-3" class="content">
+                            <h2>Liste Des Experiances</h2>
+                           
+                            <app-afficherexperiance></app-afficherexperiance>
+                        </div>
+                        <div id="test-l-4" class="content text-center">
+
+                            <h2>Votre Preferance</h2>
+                            <app-ajoutpreferance></app-ajoutpreferance>
+                        </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        </div>
+    </section>

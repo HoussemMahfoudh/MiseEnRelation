@@ -1,0 +1,178 @@
+<!-- 
+<div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+  aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Candidature </h5>
+        <button type="button" routerLink="/ListJobs" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <form (ngSubmit)="SaveCandiature()">
+
+          <div class="image">
+            <img src="/assets/images/calendar.png" alt="Image" class="img-fluid">
+
+          </div>
+          <p class="msg">Attention à rester compétitif pour être sélectionné(e) sans pour autant sous estimer
+            la valeur de ton travail au risque de ne pas être crédible.*
+          </p>
+
+          <div class="form-group">
+            <label class="bud" for="exampleInputEmail1"><B>Buget:</B></label>
+            <input type="text" class="form-control" placeholder="12$" name="budgetDemande"
+              [(ngModel)]="Candidat.budgetDemande">
+          </div>
+          <div class="form-group">
+            <label class="why" for="exampleInputPassword1"><B>Pourquoi es-tu le parfait Candidat pour remplir
+                cette mission ?</B></label>
+            <textarea class="form-control" id="textarea" placeholder="Écrivez quelques lignes sur vos travaux" rows="8"
+              name="descCompetances" [(ngModel)]="Candidat.descCompetances">
+                         </textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" (onclick)="SaveCandiature()">Postuler</button>
+        </form>
+
+      </div>
+
+
+      <div class="modal-footer">
+        <button type="button" routerLink="/ListJobs" class="btn btn-secondary" data-dismiss="modal">Annuler</button>
+      </div>
+    </div>
+  </div>
+</div> 
+
+ -->
+
+
+
+<!---/demosWTR/Freedom/01-11-2019/hr-crew-freedom-web-demo_Free/1988896932/webindex.htmlselect * from template_down_details where starter_demo_url='/demosWTR/Freedom/01-11-2019/hr-crew-freedom-web-demo_Free/1988896932/webindex.html' lat part:jobs.html--->
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from demo.w3layouts.com/demosWTR/Freedom/01-11-2019/hr-crew-freedom-web-demo_Free/1988896932/web/jobs.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Aug 2020 08:17:15 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>HR Crew a Human Resource category Responsive Web Template | Jobs page : W3layouts</title>
+    <link rel="stylesheet" href="/assets/css/style-freedom.css">
+</head>
+
+<body>
+    <script src='/assets/jq/jquery.min.js'></script>
+    <script src="/assets/js/monetization.js" type="text/javascript"></script>
+    <script>
+        (function () {
+            if (typeof _bsa !== 'undefined' && _bsa) {
+                // format, zoneKey, segment:value, options
+                _bsa.init('flexbar', 'CKYI627U', 'placement:w3layoutscom');
+            }
+        })();
+    </script>
+    <script>
+        (function () {
+            if (typeof _bsa !== 'undefined' && _bsa) {
+                // format, zoneKey, segment:value, options
+                _bsa.init('fancybar', 'CKYDL2JN', 'placement:demo');
+            }
+        })();
+    </script>
+    <script>
+        (function () {
+            if (typeof _bsa !== 'undefined' && _bsa) {
+                // format, zoneKey, segment:value, options
+                _bsa.init('stickybox', 'CKYI653J', 'placement:w3layoutscom');
+            }
+        })();
+    </script>
+    <!--<script>(function(v,d,o,ai){ai=d.createElement("script");ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, "//a.vdo.ai/core/w3layouts_V2/vdo.ai.js?vdo=34");</script>-->
+    <div id="codefund">
+        <!-- fallback content -->
+    </div>
+    <script src="https://ethicalads.io/?ref=codefund" async="async"></script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src='https://www.googletagmanager.com/gtag/js?id=UA-149859901-1'></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-149859901-1');
+    </script>
+
+    <script>
+        window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+        ga('create', 'UA-149859901-1', 'demo.w3layouts.com');
+        ga('require', 'eventTracker');
+        ga('require', 'outboundLinkTracker');
+        ga('require', 'urlChangeTracker');
+        ga('send', 'pageview');
+    </script>
+    <script async src='/assets/js/autotrack.js'></script>
+
+
+
+    <section class="w3l-inner-banner">
+        <div class="wrapper">
+        </div>
+    </section>
+ 
+    <!-- Blog -->
+    <section class="w3l-blog-single no-padding">
+        <div class="single blog">
+            <div class="wrapper">
+             
+              <form (ngSubmit)="SaveCandiature()">
+               
+                <div class="image">
+                  <img src="/assets/images/calendar.png" alt="Image" class="img-fluid">
+      
+                </div>
+                <p class="msg">Attention à rester compétitif pour être sélectionné(e) sans pour autant sous estimer
+                  la valeur de ton travail au risque de ne pas être crédible.*
+                </p>
+      
+                <div class="form-group">
+                  <label class="bud" for="exampleInputEmail1"><B>Buget:</B></label>
+                  <input type="number" class="form-control" placeholder="50Dt" name="budgetDemande"
+                    [(ngModel)]="Candidat.budgetDemande">
+                </div>
+                <div class="form-group">
+                  <label class="why" for="exampleInputPassword1"><B>Pourquoi es-tu le parfait Candidat pour remplir
+                      cette mission ?</B></label>
+                  <textarea class="form-control" id="textarea" placeholder="Écrivez quelques lignes sur vos travaux" rows="8"
+                    name="descCompetances" [(ngModel)]="Candidat.descCompetances">
+                               </textarea>
+                </div>
+                <button type="submit" class="btn btn-primary" (onclick)="SaveCandiature()">Postuler</button>
+              </form>
+            </div>
+        </div>
+    </section>
+    <!-- //blog single-->
+
+    <div class="display-ad" style="margin: 8px auto;display: block;text-align: center;">
+        <!---728x90--->
+
+    </div>
+
+
+</body>
+
+
+<!-- Mirrored from demo.w3layouts.com/demosWTR/Freedom/01-11-2019/hr-crew-freedom-web-demo_Free/1988896932/web/jobs.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Aug 2020 08:17:15 GMT -->
+
+</html>

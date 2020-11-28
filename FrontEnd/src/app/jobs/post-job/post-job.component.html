@@ -1,0 +1,236 @@
+<!---/demosWTR/Freedom/01-11-2019/hr-crew-freedom-web-demo_Free/1988896932/webindex.htmlselect * from template_down_details where starter_demo_url='/demosWTR/Freedom/01-11-2019/hr-crew-freedom-web-demo_Free/1988896932/webindex.html' lat part:jobs.html--->
+<!--
+Author: W3layouts
+Author URL: http://w3layouts.com
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from demo.w3layouts.com/demosWTR/Freedom/01-11-2019/hr-crew-freedom-web-demo_Free/1988896932/web/jobs.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Aug 2020 08:17:15 GMT -->
+<!-- Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>HR Crew a Human Resource category Responsive Web Template | Jobs page : W3layouts</title>
+  <link rel="stylesheet" href="/assets/css/style-freedom.css">
+</head>
+
+<body>
+  <script src='/assets/jq/jquery.min.js'></script>
+  <script src="/assets/js/monetization.js" type="text/javascript"></script>
+  <script>
+    (function () {
+      if (typeof _bsa !== 'undefined' && _bsa) {
+        // format, zoneKey, segment:value, options
+        _bsa.init('flexbar', 'CKYI627U', 'placement:w3layoutscom');
+      }
+    })();
+  </script>
+  <script>
+    (function () {
+      if (typeof _bsa !== 'undefined' && _bsa) {
+        // format, zoneKey, segment:value, options
+        _bsa.init('fancybar', 'CKYDL2JN', 'placement:demo');
+      }
+    })();
+  </script>
+  <script>
+    (function () {
+      if (typeof _bsa !== 'undefined' && _bsa) {
+        // format, zoneKey, segment:value, options
+        _bsa.init('stickybox', 'CKYI653J', 'placement:w3layoutscom');
+      }
+    })();
+  </script>
+  <!--<script>(function(v,d,o,ai){ai=d.createElement("script");ai.defer=true;ai.async=true;ai.src=v.location.protocol+o;d.head.appendChild(ai);})(window, document, "//a.vdo.ai/core/w3layouts_V2/vdo.ai.js?vdo=34");</script>-->
+  <div id="codefund">
+    <!-- fallback content -->
+  </div>
+  <script src="https://ethicalads.io/?ref=codefund" async="async"></script>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src='https://www.googletagmanager.com/gtag/js?id=UA-149859901-1'></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'UA-149859901-1');
+  </script>
+
+  <script>
+    window.ga = window.ga || function () { (ga.q = ga.q || []).push(arguments) }; ga.l = +new Date;
+    ga('create', 'UA-149859901-1', 'demo.w3layouts.com');
+    ga('require', 'eventTracker');
+    ga('require', 'outboundLinkTracker');
+    ga('require', 'urlChangeTracker');
+    ga('send', 'pageview');
+  </script>
+  <script async src='/assets/js/autotrack.js'></script>
+  <section class="w3l-inner-banner">
+  </section>
+
+  <!-- Blog -->
+  <section class="w3l-blog-single no-padding">
+    <div class="single blog">
+      <div class="wrapper">
+        <div class="container">
+          <div id="stepper1" class="bs-stepper">
+            <div class="bs-stepper-header">
+              <div class="step" data-target="#test-l-1">
+                <button class="step-trigger">
+                  <span class="bs-stepper-circle">1</span>
+                  <span class="bs-stepper-label">Catégorie de la Mission</span>
+                </button>
+              </div>
+              <div class="line"></div>
+              <div class="step" data-target="#test-l-2">
+                <button class="step-trigger">
+                  <span class="bs-stepper-circle">2</span>
+                  <span class="bs-stepper-label">Description</span>
+                </button>
+              </div>
+              <div class="line"></div>
+              <div class="step" data-target="#test-l-3">
+                <button class="step-trigger">
+                  <span class="bs-stepper-circle">3</span>
+                  <span class="bs-stepper-label">Informations Supplémentaires </span>
+                </button>
+              </div>
+              <div class="line"></div>
+              <div class="step" data-target="#test-l-4">
+                <button class="step-trigger">
+                  <span class="bs-stepper-circle">4</span>
+                  <span class="bs-stepper-label">Budget et Validation </span>
+                </button>
+              </div>
+            </div>
+            <div class="bs-stepper-content">
+              <form (ngSubmit)="SaveMission()">
+                <div id="test-l-1" class="content">
+                  <label for="Budget">Catégorie</label>
+                  <div class="form-row">
+                    <div class="jss69" *ngFor="let suit of categ">
+                      <div class="jss62 jss68">
+                        <img src="/assets/images/{{suit.nomCateg}}.svg" width="110">
+                      </div>
+                      <button type="button" class="btn btn-light" title="" 
+                      (click)="onclickcateg(suit.idCateg)">{{suit.nomCateg}}</button>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                  <div class="form-group col-md-6">
+                    <label for="inputState">Type de Travail</label>
+                    <select id="inputState" class="form-control" name="poste" [(ngModel)]="unemission.poste">
+                      <option *ngFor="let suit of typetravail">{{suit.nomtype}}</option>
+                      <option>Test</option>
+                    </select>
+                  </div>
+                  </div>
+                  <button class="tt" (click)="next()"  type="button" >Suivant</button>
+                </div>
+                <div id="test-l-2" class="content">
+                  <div class="form-row">
+                    <label for="TitredeMission">Titre de Mission</label>
+                    <input type="text" class="form-control" id="TitredeMission" placeholder="Titre de Mission"
+                      name="titreMission" [(ngModel)]="unemission.titreMission">
+                  </div>
+                  <div class="form-row">
+
+                    <label for="Comptetances">Comptetances</label>
+                    <input type="text" class="form-control" id="Comptetances" placeholder="Comptetances"
+                      name="competances" [(ngModel)]="unemission.competances">
+
+                  </div>
+                  <div class="form-row">
+                    <label for="localisation">localisation</label>
+                    <input type="text" class="form-control" id="inputPassword4" placeholder="localisation" name="localisation"
+                      [(ngModel)]="unemission.localisation">
+                  </div>
+
+                  <div class="form-row">
+                    <label for="Description">Description du Mission</label>
+                    <input type="textarea" class="form-control" id="Description" placeholder="La Mission consiste a"
+                      name="description" [(ngModel)]="unemission.description">
+                  </div>
+
+                  <button (click)="next()" class="tt"   type="button" >Suivant</button>
+                </div>
+                <div id="test-l-3" class="content">
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <img src="/assets/images/car.png" width="50">
+                      <label for="Vehicule">Vehicule</label>
+                                    
+                      <select id="inputState" class="form-control" name="vehicule" [(ngModel)]="unemission.vehicule">
+                        <option>Oui</option>
+                        <option selected>Non</option>
+                      </select>
+                    </div>
+
+                    <div class="form-group col-md-6">
+                      <img src="/assets/images/Toolbox.png" width="50">
+                      <label for="inputState">Assesoires</label>
+                      <select id="inputState" class="form-control" name="accessoires" [(ngModel)]="unemission.accessoires">
+                        <option selected>Aucune</option>
+                        <option>chaussures de sécurité</option>
+                      </select>
+                    </div>
+                  </div>
+
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <img src="/assets/images/calen.png" width="50">
+                      <label for="Comptetances">Date Debut</label>
+                      <input type="date" class="form-control" id="Comptetances" placeholder="Comptetances">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <img src="/assets/images/calen.png" width="50">
+                      <label for="Budget">Date Fin</label>
+                      <input type="date" class="form-control" id="Budget" placeholder="Budget">
+                    </div>
+                  </div>
+                 
+
+                  <button (click)="next()"  class="tt"  type="button" >Suivant</button>
+                </div>
+                <div id="test-l-4" class="content text-center">
+
+                  <div class="form-row">
+                 
+                    <img src="/assets/images/budget.png" width="60">
+                    <label for="Budget">Budget</label>
+                    <input type="number" class="form-control" id="Budget" placeholder="Budget" name="budget"
+                      [(ngModel)]="unemission.budget">
+                  
+                  </div>
+
+                  
+                  <button type="submit" class="tt">Sauvgarder</button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+  <!-- //blog single-->
+
+  <div class="display-ad" style="margin: 8px auto;display: block;text-align: center;">
+    <!---728x90--->
+
+  </div>
+
+
+</body>
+
+
+<!-- Mirrored from demo.w3layouts.com/demosWTR/Freedom/01-11-2019/hr-crew-freedom-web-demo_Free/1988896932/web/jobs.html by HTTrack Website Copier/3.x [XR&CO'2014], Fri, 14 Aug 2020 08:17:15 GMT -->
+
+</html>

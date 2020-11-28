@@ -1,0 +1,84 @@
+
+ <!-- Button trigger modal -->
+
+
+<img  src="/assets/images/add.png" type="button" width="50" data-toggle="modal" data-target="#exampleModalLong" alt="Action" >
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLongTitle">Experiance</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+      
+        <form (ngSubmit)="Saveexper()">
+          <!--   <div class="form-group">
+              <label for="nomentreprise" class="bmd-label-floating">Nom de l'entreprise</label>
+              <input type="text" class="form-control" id="nomentreprise" name="posteoc"
+              [(ngModel)]="exper.nomentreprise">
+              
+            </div> -->
+
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="nomentreprise" class="bmd-label-floating">Nom de l'entreprise</label>
+                    <input type="text" class="form-control" id="nomentreprise" name="posteoc" placeholder="exemple:Excellentzia..."
+                    [(ngModel)]="exper.nomentreprise">
+                  </div>
+                <div class="form-group col-md-6">
+                    <label for="domaine" class="bmd-label-floating">Domaine</label>
+                    <input type="text" class="form-control" id="domaine" name="Domaine" placeholder="exemple:IT..."
+                    [(ngModel)]="exper.domaine">
+                </div>
+              </div>
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <label for="inputState">Catégorie</label>
+                    <select id="inputState" class="form-control">
+                      <option *ngFor="let suit of categ">{{suit.nomCateg}}</option>
+                    </select>
+                  </div>
+                <div class="form-group col-md-6">
+                  <label for="posteoc">Poste Ouccpe</label> 
+                  <input type="text" class="form-control" id="posteoc" placeholder="exemple:ingenieur..." name="posteoccupe"
+                  [(ngModel)]="exper.posteoccupe">
+                </div>
+              </div>
+            <div class="form-group">
+              <label for="com" class="bmd-label-floating">Comptetances</label>
+              <input type="text" class="form-control" id="com" placeholder=" ..." name="competances"
+              [(ngModel)]="exper.competances">
+            </div> 
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                  <label for="Comptetances">Date Debut</label>
+                  <input type="date" class="form-control" id="Comptetances" 
+                  name="datedeb"
+                  [(ngModel)]="exper.datedeb">
+                </div>
+                <div class="form-group col-md-6">
+                  <label for="Budget">Date Fin</label>
+                  <input type="date" class="form-control" id="Budget" 
+                  [(ngModel)]="exper.dateFin"  name="datedeb">
+                </div>
+              </div>
+            <div class="form-group">
+              <label for="desc" class="bmd-label-floating">Description</label>
+              <textarea class="form-control" id="desc" rows="3" [(ngModel)]="exper.DateFin"  name="Description"></textarea>
+            </div>
+           
+            <button type="submit" class="btn btn-primary btn-raised" (onclick)="Saveexper()">Ajouter</button>
+          </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fermer</button>
+        
+      </div>
+    </div>
+  </div>
+</div>

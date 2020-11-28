@@ -1,0 +1,28 @@
+button{
+    margin-block:initial;
+    margin-left: 3%;
+    margin-bottom: 3%;
+    margin-top:2%;
+}
+h5{
+    text-align: left;
+    color: #445dd8;
+}
+p{
+    margin-bottom: 2%;
+    color: #9395a1;
+}
+
+.green {
+    background-color: #8b8888d8;
+}
+
+.red {
+    background-color: #576dd6;
+}
+input{
+    color: blue;
+}
+.test0{
+    text-align: left;
+}

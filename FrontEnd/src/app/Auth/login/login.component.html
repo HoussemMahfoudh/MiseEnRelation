@@ -1,0 +1,54 @@
+    <section class="w3l-inner-banner">
+        <div class="wrapper">
+        </div>
+    </section>
+    <!-- w3l-forms-31 -->
+    <section class="w3l-forms-31">
+        <div id="w3l-forms-31_sur">
+            <div class="wrapper">
+                <div class="d-grid">
+                    <div class="w3l-forms-31-top">
+                        <h4>Using social accounts</h4>
+                        <p>Donec sed tempus enim, a congue risus. euismod massa a quam viverra interdum.</p>
+                        <form action="#" method="post" class="signin-form">
+                            <div class="form-input">
+                                <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span> Signin with
+                                    facebook</a>
+                            </div>
+                            <div class="form-input">
+                                <a href="#linkedin" class="linkedin"><span class="fa fa-linkedin"></span> Signin with
+                                    linkedin</a>
+                            </div>
+                            <div class="form-input">
+                                <a href="#google-plus" class="google"><span class="fa fa-google-plus"></span> Signin
+                                    with google</a>
+                            </div>
+                            <p class="no-margin"> Click “Login” to accept our Terms of Service & Privacy Policy.</p>
+                        </form>
+                    </div>
+                    <div class="w3l-forms-31-right">
+                        <h4>Login using email</h4>
+                        <form *ngIf="!isLoggedIn" name="form" (ngSubmit)="f.form.valid && onSubmit()" #f="ngForm" novalidate class="login-form">
+                            <div class="form-input">
+                                <input type="email" name="email" [(ngModel)]="form.email" required #email="ngModel" placeholder="mail@mail.com" required="" />
+                            </div>
+                            <div class="form-input">
+                                <input type="password" name="password" [(ngModel)]="form.password" required minlength="6" #password="ngModel" placeholder="Minimum 6 characters" required="" />
+                            </div>
+                            <a href="#url" class="forgot">mot de passe oublié?? </a>
+                            <button class="btn">Se Connecter </button>
+                            <div class="clear"></div>
+                            <p class="form_acunt text-center">Vous n'avez pas un compte? <a routerLink="/register">S'inscrire
+                                    Maintenant</a></p>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- w3l-forms-31 -->
+
+    <div class="display-ad" style="margin: 8px auto;display: block;text-align: center;">
+        <!---728x90--->
+
+    </div>

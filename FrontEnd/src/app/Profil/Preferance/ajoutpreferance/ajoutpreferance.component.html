@@ -1,0 +1,62 @@
+  
+        <div class="single blog">
+            <div class="wrapper">
+              <h5>Catégories</h5>
+              <p>Sélectionne les Catégories de missions qui t'intéressent</p>
+              <button type="button" class="btn btn-secondary" (click)="enableDisableRulevente()" [ngClass]="{'green' : togglevente, 'red': !togglevente}">Vente et Distribution
+              </button>
+              <button type="button" class="btn btn-secondary" (click)="enableDisableRulehotel()" [ngClass]="{'green' : togglehotel, 'red': !togglehotel}">Hotellerie et Restauration
+              </button>
+              <button type="button" class="btn btn-secondary" (click)="enableDisableRulelogis()" [ngClass]="{'green' : togglelogis, 'red': !togglelogis}">Logistique</button><br>
+              <button type="button" class="btn btn-secondary" (click)="enableDisableRuleeven()" [ngClass]="{'green' : toggleeven, 'red': !toggleeven}">Evenementiel et Communication
+              </button>
+              <button type="button" class="btn btn-secondary" (click)="enableDisableRuleadmin()" [ngClass]="{'green' : toggleadmin, 'red': !toggleadmin}"> Communication
+                Administratif</button>
+
+            </div>
+            <form (ngSubmit)="Saveprefrance()">
+          <div class="wrapper">
+            <h5>Distance</h5>
+            <p>À quelle distance maximale de chez toi souhaites-tu travailler ? </p>
+            <input type="number" class="form-control" id="distancehomeloctravail" placeholder="10Km" 
+            name="distancehomeloctravail"
+            [(ngModel)]="preferance.distancehomeloctravail"
+            >
+
+          </div>
+
+        <div class="wrapper">
+          <h5>Temps de travail</h5>
+          <p>Maximum d'heures par semaine</p>
+          <input type="number" class="form-control" id="Budget" placeholder="20Heures" 
+          name="tempsHS"
+            [(ngModel)]="preferance.tempsHS">
+
+        </div>
+        <div class="test0">
+        <div class="wrapper">
+          <h5>Disponible pour les missions de dernières minutes</h5>
+          <div class="form-group col-md-6">
+            <select id="inputState" class="form-control" name="disponibliteDerM"
+            [(ngModel)]="preferance.disponibliteDerM">
+            <option>true</option>
+            <option selected>false</option>
+            </select>
+          </div>
+        </div>
+    </div>
+        <div class="wrapper">
+            <h5>Contrats</h5>
+            <p>Sous quel(s) type(s) de contrat souhaites tu travailler ?</p>
+            <div class="form-group col-md-6">
+              <select id="inputState" class="form-control" name="typeContartPrefere"
+              [(ngModel)]="preferance.typeContartPrefere">
+              <option selected>CDD</option>
+              <option >CDI</option>
+              <option>Les Deux </option>
+              </select>
+            </div>
+          </div>
+          <button type="submit" class="btn btn-primary">Sauvgarder</button>
+        </form>
+    </div>
